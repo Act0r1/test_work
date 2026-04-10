@@ -43,16 +43,16 @@ uv run python -m src.consumer  # отдельный терминал
 
 | Переменная | Описание | По умолчанию |
 |---|---|---|
-| `POSTGRES_USER` | Пользователь БД | `app` |
-| `POSTGRES_PASSWORD` | Пароль БД | `app` |
-| `POSTGRES_HOST` | Хост БД | `localhost` |
+| `POSTGRES_USER` | Пользователь БД | `postgres` |
+| `POSTGRES_PASSWORD` | Пароль БД | `postgres` |
+| `POSTGRES_HOST` | Хост БД | `postgres` |
 | `POSTGRES_PORT` | Порт БД | `5432` |
-| `POSTGRES_DB` | Имя БД | `app` |
+| `POSTGRES_DB` | Имя БД | `postgres` |
 | `RABBITMQ_USER` | Пользователь RabbitMQ | `guest` |
 | `RABBITMQ_PASSWORD` | Пароль RabbitMQ | `guest` |
-| `RABBITMQ_HOST` | Хост RabbitMQ | `localhost` |
+| `RABBITMQ_HOST` | Хост RabbitMQ | `rabbitmq` |
 | `RABBITMQ_PORT` | Порт RabbitMQ | `5672` |
-| `API_KEY` | Статический API ключ | `changeme` |
+| `API_KEY` | Статический API ключ | `test` |
 | `WEBHOOK_TIMEOUT` | Таймаут webhook запроса (сек) | `10.0` |
 | `WEBHOOK_MAX_RETRIES` | Макс. попыток webhook | `3` |
 | `WEBHOOK_BASE_DELAY` | Базовая задержка retry (сек) | `1.0` |
@@ -64,7 +64,7 @@ uv run python -m src.consumer  # отдельный терминал
 ```bash
 curl -X POST http://localhost:8000/api/v1/payments \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: changeme" \
+  -H "X-API-Key: test" \
   -H "Idempotency-Key: 550e8400-e29b-41d4-a716-446655440000" \
   -d '{
     "amount": "150.00",
@@ -79,5 +79,5 @@ curl -X POST http://localhost:8000/api/v1/payments \
 
 ```bash
 curl http://localhost:8000/api/v1/payments/{payment_id} \
-  -H "X-API-Key: changeme"
+  -H "X-API-Key: test"
 ```

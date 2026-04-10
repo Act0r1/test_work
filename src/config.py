@@ -6,18 +6,18 @@ class Settings(BaseSettings):
 
     log_level: str = "INFO"
 
-    postgres_user: str = "app"
-    postgres_password: str = "app"
-    postgres_host: str = "localhost"
+    postgres_user: str = "postgres"
+    postgres_password: str = "postgres"
+    postgres_host: str = "postgres"
     postgres_port: int = 5432
-    postgres_db: str = "app"
+    postgres_db: str = "postgres"
 
     rabbitmq_user: str = "guest"
     rabbitmq_password: str = "guest"
-    rabbitmq_host: str = "localhost"
+    rabbitmq_host: str = "rabbitmq"
     rabbitmq_port: int = 5672
 
-    api_key: str = "changeme"
+    api_key: str = "test"
 
     webhook_timeout: float = 10.0
     webhook_max_retries: int = 3
