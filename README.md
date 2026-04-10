@@ -56,6 +56,7 @@ uv run python -m src.consumer  # отдельный терминал
 | `WEBHOOK_TIMEOUT` | Таймаут webhook запроса (сек) | `10.0` |
 | `WEBHOOK_MAX_RETRIES` | Макс. попыток webhook | `3` |
 | `WEBHOOK_BASE_DELAY` | Базовая задержка retry (сек) | `1.0` |
+| `POLL_INTERVAL` | Интервал опроса outbox worker (сек) | `5.0` |
 
 ## Примеры
 

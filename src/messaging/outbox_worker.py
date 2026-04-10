@@ -39,4 +39,4 @@ async def run_outbox_worker() -> None:
             await process_outbox()
         except Exception:
             logger.exception("Outbox worker iteration failed")
-        await asyncio.sleep(settings.POLL_INTERVAL)
+        await asyncio.sleep(settings.poll_interval)

@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     webhook_max_retries: int = 3
     webhook_base_delay: float = 1.0
 
-    POLL_INTERVAL: float = 5.0
+    poll_interval: float = 5.0
 
     @property
     def database_url(self) -> str:
