@@ -18,6 +18,12 @@ FastAPI, Pydantic v2, SQLAlchemy 2 (async), PostgreSQL, RabbitMQ, Alembic, Docke
 
 ## Запуск
 
+Перед запуском скопируй `.env.example` в `.env` и при необходимости поменяй значения:
+
+```bash
+cp .env.example .env
+```
+
 ### Docker
 
 ```bash
